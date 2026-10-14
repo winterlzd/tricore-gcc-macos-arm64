@@ -1,0 +1,20 @@
+diff --git a/libstdc++-v3/include/std/format b/libstdc++-v3/include/std/format
+index c7e43330e..6e635d1ba 100644
+--- a/libstdc++-v3/include/std/format
++++ b/libstdc++-v3/include/std/format
+@@ -3250,8 +3250,15 @@ namespace __format
+       // the packed types are in _M_unpacked_size, accessed via _M_type(i).
+       // If args are not packed then the number of args is in _M_unpacked_size
+       // and _M_packed_size is zero.
++#ifdef __tricore__
++      // TriCore EABI limits bit-field widths to 32 bits. Keep all 60 packed
++      // argument-type bits in an ordinary integer, with a separate count.
++      uint64_t _M_packed_size;
++      uint64_t _M_unpacked_size;
++#else
+       uint64_t _M_packed_size : 4;
+       uint64_t _M_unpacked_size : 60;
++#endif
+ 
+       union {
+ 	const _Format_arg_val* _M_values; // Active when _M_packed_size != 0

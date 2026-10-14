@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "checks": [
+    "Parameterized portable packager accepts an already-portable input, preserves provenance and audits all 49 host binaries",
+    "CMake root/CPU overrides, compiler detection and actual C/C++ static library build",
+    "Source archive checksum/extraction, both GCC patches, idempotent source preparation and archive hygiene",
+    "All five source archives match their published SHA-256 checksums",
+    "All repository documentation relative links resolve",
+    "All 49 Mach-O host binaries match the previously isolated-and-tested compiler bytes"
+  ],
+  "not_run": [
+    "Full toolchain rebuild",
+    "Physical second-Mac test",
+    "Board flashing/execution"
+  ]
+}

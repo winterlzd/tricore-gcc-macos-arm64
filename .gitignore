@@ -1,0 +1,15 @@
+.DS_Store
+**/.DS_Store
+__pycache__/
+*.pyc
+.toolchain-src/
+.toolchain-build/
+tools/tricore/
+sources/*.tar.*
+dist/
+build/
+cmake-build-*/
+*.elf
+*.hex
+*.bin
+*.map

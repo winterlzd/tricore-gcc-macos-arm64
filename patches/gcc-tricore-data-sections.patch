@@ -1,0 +1,13 @@
+diff --git a/gcc/config/tricore/tricore.cc b/gcc/config/tricore/tricore.cc
+index 82065e535..74b5a9df6 100644
+--- a/gcc/config/tricore/tricore.cc
++++ b/gcc/config/tricore/tricore.cc
+@@ -9479,7 +9479,7 @@ tric_asm_unique_section (tree decl, int reloc)
+           else                      ss3 = SS_ALIGN_1;
+         }
+ 
+-	  tsec = (const tric_section_t*) tric_data_section[ss1][ss2][ss3]->unnamed.data;
++	  tsec = tric_data_section_ext[ss1][ss2][ss3];
+     }
+   name = IDENTIFIER_POINTER (DECL_ASSEMBLER_NAME (decl));
+   name = targetm.strip_name_encoding (name);

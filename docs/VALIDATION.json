@@ -1,0 +1,42 @@
+{
+  "toolchain": "<relocated-toolchain-with-spaces-and-non-ascii-name>",
+  "checks": [
+    "All 49 Mach-O files use only bundled or system dependencies",
+    "All modified Mach-O signatures verified",
+    "C compile, libc/math headers and assembler",
+    "C link with libc, libm and libgcc",
+    "C++17 standard headers, compile and minimal link",
+    "Archive, HEX/BIN export, TC1.6.1 ELF with no unresolved symbols",
+    "LTO compile and link, lto-dump startup",
+    "All TC26xx target library search paths resolve inside the relocated toolchain",
+    "dyld trace confirms all four bundled host libraries were actually loaded"
+  ],
+  "loaded_host_libraries": [
+    "<toolchain>/bin/tricore-elf-ar",
+    "<toolchain>/bin/tricore-elf-g++",
+    "<toolchain>/bin/tricore-elf-gcc",
+    "<toolchain>/bin/tricore-elf-lto-dump",
+    "<toolchain>/bin/tricore-elf-nm",
+    "<toolchain>/bin/tricore-elf-objcopy",
+    "<toolchain>/bin/tricore-elf-readelf",
+    "<toolchain>/lib/host/libgmp.10.dylib",
+    "<toolchain>/lib/host/libisl.23.dylib",
+    "<toolchain>/lib/host/libmpc.3.dylib",
+    "<toolchain>/lib/host/libmpfr.6.dylib",
+    "<toolchain>/libexec/gcc/tricore-elf/13.4.1/cc1",
+    "<toolchain>/libexec/gcc/tricore-elf/13.4.1/cc1plus",
+    "<toolchain>/libexec/gcc/tricore-elf/13.4.1/collect2",
+    "<toolchain>/libexec/gcc/tricore-elf/13.4.1/liblto_plugin.so",
+    "<toolchain>/libexec/gcc/tricore-elf/13.4.1/lto-wrapper",
+    "<toolchain>/libexec/gcc/tricore-elf/13.4.1/lto1",
+    "<toolchain>/tricore-elf/bin/as",
+    "<toolchain>/tricore-elf/bin/ld"
+  ],
+  "denied_paths": [
+    "/opt/homebrew",
+    "<original-toolchain-volume>",
+    "<original-project>"
+  ],
+  "status": "passed",
+  "note": "Paths normalized for public documentation; findings unchanged. Actual binary hashes are in PORTABLE-MANIFEST.json."
+}

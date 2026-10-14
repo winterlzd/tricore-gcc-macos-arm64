@@ -1,0 +1,76 @@
+{
+  "toolchain_wrapper": {
+    "url": "https://github.com/NoMore201/tricore-gcc-toolchain",
+    "commit": "eb167cf281d95e220546aff2c4ecb99a2f91b90c"
+  },
+  "components": [
+    {
+      "name": "tricore-gcc",
+      "url": "https://github.com/NoMore201/tricore-gcc",
+      "commit": "59834f272d9c0d051329195c867341238b0c6a86"
+    },
+    {
+      "name": "tricore-binutils-gdb",
+      "url": "https://github.com/NoMore201/tricore-binutils-gdb",
+      "commit": "78ccc076bc8cad0f9e08c81ca1c89b5e89dfb8f3"
+    },
+    {
+      "name": "tricore-newlib-cygwin",
+      "url": "https://github.com/EEESlab/tricore-newlib-cygwin",
+      "commit": "240a8f676ea923c703824e996fbe88ac4a302e17"
+    }
+  ],
+  "host_libraries": [
+    {
+      "name": "gmp",
+      "version": "6.3.0",
+      "url": "https://ftpmirror.gnu.org/gnu/gmp/gmp-6.3.0.tar.xz",
+      "mirrors": [
+        "https://gmplib.org/download/gmp/gmp-6.3.0.tar.xz"
+      ],
+      "sha256": "a3c2b80201b89e68616f4ad30bc66aee4927c3ce50e33929ca819d5c43538898",
+      "archive": "gmp-6.3.0.tar.xz",
+      "origin": "Homebrew bottle; copied dylibs then changed install names and ad-hoc signatures"
+    },
+    {
+      "name": "mpfr",
+      "version": "4.2.2",
+      "url": "https://ftpmirror.gnu.org/gnu/mpfr/mpfr-4.2.2.tar.xz",
+      "mirrors": [
+        "https://ftp.gnu.org/gnu/mpfr/mpfr-4.2.2.tar.xz"
+      ],
+      "sha256": "b67ba0383ef7e8a8563734e2e889ef5ec3c3b898a01d00fa0a6869ad81c6ce01",
+      "archive": "mpfr-4.2.2.tar.xz",
+      "origin": "Homebrew bottle; copied dylibs then changed install names and ad-hoc signatures"
+    },
+    {
+      "name": "libmpc",
+      "version": "1.4.1",
+      "url": "https://ftpmirror.gnu.org/gnu/mpc/mpc-1.4.1.tar.xz",
+      "mirrors": [
+        "https://ftp.gnu.org/gnu/mpc/mpc-1.4.1.tar.xz"
+      ],
+      "sha256": "91204cd32f164bd3b7c992d4a6a8ce6519511aadab30f78b6982d0bf8d73e931",
+      "archive": "mpc-1.4.1.tar.xz",
+      "origin": "Homebrew bottle; copied dylibs then changed install names and ad-hoc signatures"
+    },
+    {
+      "name": "isl",
+      "version": "0.28",
+      "url": "https://libisl.sourceforge.io/isl-0.28.tar.xz",
+      "mirrors": [],
+      "sha256": "3dc31b8e1b18329e42d5dfbf84dd55e15c59b61569a2ab246f61497d9592f727",
+      "archive": "isl-0.28.tar.xz",
+      "origin": "Homebrew bottle; copied dylibs then changed install names and ad-hoc signatures"
+    }
+  ],
+  "toolchain_source_archive": {
+    "path": "sources/tricore-toolchain-source.tar.gz",
+    "source_state": "GCC patches applied, matching the source used for the existing build",
+    "excluded": [
+      "Git administration directories",
+      "Finder metadata",
+      "Python caches"
+    ]
+  }
+}
